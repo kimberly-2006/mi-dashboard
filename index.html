@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mi Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Mi Dashboard</h1>
+    <button id="theme-btn">Modo Oscuro</button>
+  </header>
+ 
+ <main>
+    <div class="tarjeta">
+    <div class="tarjeta perfil">
+      <div class="avatar">K</div>
+  	<div>
+    <h2> Kimberly Elizabeth Gonzalés Solis </h2>
+    <p> Hasta que todo sea como lo Soñamos. </p>
+  </div>
+</div>
+      <p>Hora actual: <span id="clock">00:00:00</span></p>
+
+<div class="tarjeta">
+  <h2>Mis tareas</h2>
+
+<div class="barra">
+  <div id="progress-fill" class="barra-relleno"></div>
+</div>
+<p id="progress-text">0% completado</p>
+
+  <form id="task-form">
+    <input type="text" id="task-input" placeholder="Escribe una tarea..." required>
+    <button type="submit">Agregar</button>
+  </form>
+
+    <ul id="task-list">
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+</main>
+
+  
+<script src="app.js"></script>
+</body>
+</html>

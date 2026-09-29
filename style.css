@@ -1,0 +1,139 @@
+/* Tus colores guardados en "cajitas" con nombre */
+:root {
+  --fondo: #f5f5f0;
+  --tarjeta: #ffffff;
+  --texto: #1a1a1a;
+  --color-principal: #e8590c;
+  --borde: #dddddd;
+}
+
+body.dark-mode {
+  --fondo: #1a1a1a;
+  --tarjeta: #2b2b2b;
+  --texto: #f0f0f0;
+  --borde: #444444;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--fondo);
+  color: var(--texto);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background: var(--tarjeta);
+}
+
+h1 { margin: 0; font-size: 1.4rem; }
+h2 { margin-top: 0; }
+main {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 0 16px;
+}
+
+.tarjeta {
+  background: var(--tarjeta);
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.perfil {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.avatar {
+  width: 70px;
+  height: 70px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--color-principal);
+  color: white;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  background: var(--color-principal);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+input {
+  flex: 1;
+  min-width: 0;
+  padding: 10px;
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  font-size: 1rem;
+  background: var(--fondo);
+  color: var(--texto);
+}
+
+ul { list-style: none; padding: 0; margin: 0; }
+
+li {
+  padding: 10px 12px;
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.barra {
+  background: var(--borde);
+  height: 14px;
+  border-radius: 999px;
+  overflow: hidden;
+  margin: 12px 0 6px;
+}
+.barra-relleno {
+  height: 100%;
+  width: 50%;
+  background: var(--color-principal);
+}
+
+@media (max-width: 600px) {
+  .perfil { flex-direction: column; text-align: center; }
+  form { flex-direction: column; }
+}
+
+button { transition: 0.2s; }
+button:hover {
+  background: #c2410c;
+  transform: translateY(-2px);
+}
+li:hover { background: var(--fondo); }
+
+li.completada {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+#clock {
+  font-family: monospace;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--color-principal);
+}
